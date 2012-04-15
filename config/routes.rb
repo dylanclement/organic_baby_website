@@ -1,4 +1,10 @@
 RailsBootstrap::Application.routes.draw do
+  get "home/home"
+
+  get "home/contact_us"
+
+  get "home/login"
+
   resources :users
 
   # The priority is based upon order of creation:
