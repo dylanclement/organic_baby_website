@@ -1,4 +1,6 @@
 RailsBootstrap::Application.routes.draw do
+  get "users/new"
+
   get "home/home"
 
   get "home/contact_us"
