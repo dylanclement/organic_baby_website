@@ -5,7 +5,13 @@ html {
 }
 
 body {
-  background-image: url('/assets/background.jpg');
+  padding-top: 60px;
+  background-image: url(bark_background.png);
+}
+
+.container {
+  background: #ffffff;
+  padding: 9px;
 }
 
 section {
