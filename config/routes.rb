@@ -1,16 +1,16 @@
 RailsBootstrap::Application.routes.draw do
   resources :users
-
-  root :to => 'home#home'
+  resources :sessions, only: [:new, :create, :destroy]
   
   get "home/home"
-
   get "home/contact_us"
-
   get "home/login"
 
-  resources :users
-
+  match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+  match '/home',    to: 'home#home'
+  root :to => 'home#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
