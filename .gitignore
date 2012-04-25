@@ -14,6 +14,6 @@
 /log/*.log
 /tmp
 *.swp
-*.sass-cache
+*.sass-cache*
 *redcar*
 Gemfile.lock
