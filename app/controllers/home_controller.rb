@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def login
   end
+
+  def buy
+  end
 end

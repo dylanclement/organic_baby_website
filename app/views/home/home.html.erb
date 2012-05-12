@@ -6,31 +6,15 @@
   </div>
   <div class="span6">
     <ul class="thumbnails">
+      <% 
+        @random_inv = Inventory.all(:order => 'RANDOM()', :limit => 4)
+        @random_inv.each do |inventory| 
+      %>  
       <li class="span3">
-        <a href="#" class="thumbnail">
-          <img src="http://placehold.it/260x180" alt="">
-        </a>
-        <p>Buy</p>
+        <<%= link_to image_tag(inventory.imageurl, :size => "130x90"), inventory %>
+        <p><%= link_to 'Buy', inventory %><p>
       </li>
-      <li class="span3">
-        <a href="#" class="thumbnail">
-          <img src="http://placehold.it/260x180" alt="">
-        </a>
-        <p>Buy</p>
-      </li>
-      <li class="span3">
-        <a href="#" class="thumbnail">
-          <img src="http://placehold.it/260x180" alt="">
-        </a>
-        <p>Buy</p>
-      </li>
-      <li class="span3">
-        <a href="#" class="thumbnail">
-          <img src="http://placehold.it/260x180" alt="">
-        </a>
-        <p>Buy</p>
-      </li>
-
+      <% end %>
     </ul>
   </div>
 </div>
