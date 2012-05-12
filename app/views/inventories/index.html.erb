@@ -1,0 +1,18 @@
+<h1>Listing inventories</h1>
+
+<ul class="thumbnails">
+  <% @inventories.each do |inventory| %>
+  <li class="span2">
+    <%= link_to image_tag(inventory.imageurl, :size => "130x90"), inventory %>
+    <%= link_to 'Show', inventory %>
+    <%= link_to 'Destroy', inventory, confirm: 'Are you sure?', method: :delete %>
+    <p><%= inventory.name %></p>
+    <p><%= inventory.description %></p>
+    <p>£<%= inventory.price %></td>
+  </li>
+  <% end %>
+</ul>
+
+<br />
+
+<%= link_to 'New Inventory', new_inventory_path %>

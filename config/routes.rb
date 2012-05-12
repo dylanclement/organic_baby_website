@@ -1,4 +1,5 @@
 RailsBootstrap::Application.routes.draw do
+  resources :inventories
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   

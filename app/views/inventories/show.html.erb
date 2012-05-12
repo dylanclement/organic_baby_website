@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag(@inventory.imageurl, :size => "260x130") %>
+
+<br />
+<p>
+  <b>Name:</b>
+  <%= @inventory.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @inventory.description %>
+</p>
+
+<p>
+  <b>Imageurl:</b>
+  <%= @inventory.imageurl %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <span>£</span><%= @inventory.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>
